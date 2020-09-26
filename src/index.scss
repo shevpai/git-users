@@ -1,0 +1,45 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./components/Loader/Loader.scss";
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.my-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.v-align-middle {
+  vertical-align: middle!important;
+}
+
+.octicon {
+    display: inline-block;    
+    fill: #fff;
+}
+
+.octicon-repo {
+  fill: #586069!important;
+}
+
+
+
+
+
+
+
