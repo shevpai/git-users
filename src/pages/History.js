@@ -9,10 +9,10 @@ function isObjEmpty(obj) {
 const compareDate = (a, b) => new Date(b.date) - new Date(a.date)
 
 export const History = () => {
-  const { state, storage, setState } = useContext(LocalStorageContext)
+  const { state, setState,  storage, clearHistory } = useContext(LocalStorageContext)
 
   useEffect(() => {
-    setState({...storage('search_history')})
+    setState(storage('search_history') || {})
     // eslint-disable-next-line
   }, [])
 
@@ -34,7 +34,15 @@ export const History = () => {
     
   return (   
     <> 
-      <h1 className="mb-3 text-center">Last viewed users</h1>
+      <div className="mb-4 text-center">
+        <button 
+          type="button" 
+          className="btn btn-dark btn-lg"
+          onClick={clearHistory}
+          >          
+          Clear History
+        </button>
+      </div>
       <div className="row">   
         {
           users.sort(compareDate).map(user => {

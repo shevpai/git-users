@@ -6,7 +6,10 @@ export const Card = ({user}) => {
   return (
     <div className="card"> 
       <div className="my-container">
-        <img style={{width: 250, height: 300, minWidth: 100}}  src={user.avatar_url} alt={user.login} className="cart-img-top" />
+        <img style={{maxWidth: 250, height: 300, minWidth: 100}}  
+             src={user.avatar_url} 
+             alt={user.login} 
+             className="cart-img-top" />
       </div>              
       <div className="card-body text-center">
         <h5 className="card=title text-center">{user.login}</h5>

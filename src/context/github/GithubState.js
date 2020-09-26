@@ -18,7 +18,7 @@ const withCreds = url => {
 }
 
 export const GithubState = ({children}) => {
-  const { state: localHistory } = useContext(LocalStorageContext)
+  const { state: localHistory, setState } = useContext(LocalStorageContext)
   const initialState = {
     user: {},
     users: [],
@@ -54,6 +54,7 @@ export const GithubState = ({children}) => {
     const userData = response.data
     userData.lastViewed = new Date().toJSON()
 
+    setState({...localHistory, [userData.login]: userData})
     localStorage.setItem('search_history',
          JSON.stringify({...localHistory, [userData.login]: userData}))
   }

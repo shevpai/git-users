@@ -40,7 +40,7 @@ export const Profile = ({match}) => {
             <div className="col-sm-3 text-center">
               <img src={avatar_url} 
                    alt={name} 
-                   style={{width: 250, height: 300, minWidth: 100}} />
+                   style={{maxWidth: 250, height: 300, minWidth: 100}} />
               <h1 className="mt-3">{name}</h1>
               {location && <p>Location: {location}</p>}
             </div>
