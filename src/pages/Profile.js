@@ -25,7 +25,7 @@ export const Profile = ({match}) => {
   const {    
     name, company, avatar_url,
     location, bio, blog,
-    login, html_url, 
+    login, html_url, email, 
     followers, following,
     public_repos, public_gists
   } = user
@@ -45,7 +45,7 @@ export const Profile = ({match}) => {
               {location && <p>Location: {location}</p>}
             </div>
             <div className="col">
-              {bio && <Fragment><h3>BIO</h3><p>{bio}</p></Fragment>}
+              {bio && <Fragment><h3>About {name.split(' ')[0]}:</h3><p>{bio}</p></Fragment>}
               <a href={html_url}
                  target="_blank" 
                  rel="noopener noreferrer"
@@ -55,12 +55,15 @@ export const Profile = ({match}) => {
               <ul style={{listStyle: 'none', marginBottom: '7px', padding: 0}}>
                 {login && <li><strong>Username:&nbsp;</strong>{login}</li>}
                 {company && <li><strong>Company:&nbsp;</strong>{company}</li>}
+                {email && <li><strong>Email:&nbsp;</strong>{email}</li>}
                 {blog && <li><strong>Website:&nbsp;</strong>
                           <a 
                             href={blog}
                             target="_blank" 
                             rel="noopener noreferrer" 
-                          >{blog}</a></li>}
+                          >{blog[blog.length - 1] === '/'?
+                            blog.slice(0, blog.length - 1) : blog}
+                          </a></li>}
               </ul>
 
               <div className="badge badge-primary mr-1">Followers: {followers}</div>            

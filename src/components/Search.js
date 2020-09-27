@@ -36,6 +36,7 @@ export const Search = () => {
         type="text"
         className="form-control"
         placeholder="Enter github username here.."
+        spellCheck="false"
         value={value}
         onChange={event => setValue(event.target.value)}
         onKeyPress={onSubmit}
