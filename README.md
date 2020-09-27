@@ -18,4 +18,4 @@ REACT_APP_CLIENT_SECRET=[CLIENT_SECRET]
 
 <img align="left" alt="history"  src="https://i.ibb.co/FgpHVqs/git-search-history.png" />
 
-<img align="left" alt="mob-collage"  src="https://i.ibb.co/YNdFbPS/mob-collage.png" />
+<img align="left" alt="mob-collage"  src="https://i.ibb.co/c2VFCmQ/mob-collage.png" />
