@@ -11,7 +11,7 @@ export const Navbar = () => {
   }
 
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
       <NavLink exact to="/" onClick={clearHomePage}>
         <svg className="octicon octicon-mark-github v-align-middle mr-3 mb-1" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true">
         <path fillRule="evenodd" 
