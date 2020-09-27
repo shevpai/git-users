@@ -1,8 +1,8 @@
-### Small project to play with GitHub API and also learn React
+### Small project to play with GitHub API and also learn React hooks
 
 ***
 
-The idea is make my own interface to search users from GitHub and show information about them using React(hook based), Axios and 
+The idea is make my own interface to search users from GitHub and show information about them using React, Axios and 
 Bootstrap for UI.
 
 I used authorization with Client ID and  Client Secret from .env.local file:
