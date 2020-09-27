@@ -17,7 +17,7 @@ export const Repos = ({repos}) => {
   return (
     <div className="row">
       {repos.map(repo => (
-        <div className="col-sm-6 mb-4" key={repo.id}>
+        <div className="col-sm-6 mb-1" key={repo.id}>
           <div className="card mb-4">
           <div className="card-body" style={styles.body}>
             <div style={styles.conteiner}>
