@@ -1,5 +1,8 @@
 import React, { useContext, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import { Card } from '../components/Card'
+import { AlertContext } from '../context/alert/alertContext'
+import { GithubContext } from '../context/github/githubContext'
 import { LocalStorageContext } from '../context/localStorage/localStorageContext'
 
 function isObjEmpty(obj) {
@@ -9,6 +12,9 @@ function isObjEmpty(obj) {
 const compareDate = (a, b) => new Date(b.date) - new Date(a.date)
 
 export const History = () => {
+  const history = useHistory()
+  const alert = useContext(AlertContext)
+  const github = useContext(GithubContext)
   const { state, setState,  storage, clearHistory } = useContext(LocalStorageContext)
 
   useEffect(() => {
@@ -31,6 +37,13 @@ export const History = () => {
     }      
   })
 
+  const clear = () => {
+    clearHistory()
+    github.clearUsers()
+    history.push('/')
+    alert.show('History is clear')
+  }
+
     
   return (   
     <> 
@@ -38,7 +51,7 @@ export const History = () => {
         <button 
           type="button" 
           className="btn btn-dark btn-lg"
-          onClick={clearHistory}
+          onClick={clear}
           >          
           Clear History
         </button>
