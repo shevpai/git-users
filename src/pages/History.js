@@ -39,7 +39,7 @@ export const History = () => {
 
   const clear = () => {
     clearHistory()
-    github.clearUsers()
+    github.clearUsers() // optionally
     history.push('/')
     alert.show('History is clear')
   }
