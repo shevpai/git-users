@@ -10,13 +10,6 @@ import { SEARCH_USER,
 import Axios from 'axios'
 import { LocalStorageContext } from '../localStorage/localStorageContext'
 
-const CLIENT_ID = process.env.REACT_APP_CLIENT_ID
-const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET
-
-const withCreds = url => {
-  return`${url}&client_id=${CLIENT_ID}client_secret=${CLIENT_SECRET}}`
-}
-
 export const GithubState = ({children}) => {
   const { state: localHistory, setState } = useContext(LocalStorageContext)
   const initialState = {
@@ -31,7 +24,7 @@ export const GithubState = ({children}) => {
   const search = async value => {
     setLoading()
 
-    const response = await Axios.get(withCreds(`https://api.github.com/search/users?q=${value}&`))
+    const response = await Axios.get(`https://api.github.com/search/users?q=${value}&`)
 
     dispatch({
       type: SEARCH_USER,
@@ -44,7 +37,7 @@ export const GithubState = ({children}) => {
   const getUser = async name => {
    setLoading()
 
-    const response = await Axios.get(withCreds(`https://api.github.com/users/${name}?`))
+    const response = await Axios.get(`https://api.github.com/users/${name}?`)
     
     dispatch({
       type: GET_USER,
@@ -62,7 +55,7 @@ export const GithubState = ({children}) => {
   const getRepos = async name => {
     setLoading()
 
-    const response = await Axios.get(withCreds(`https://api.github.com/users/${name}/repos?per_page=5&`))
+    const response = await Axios.get(`https://api.github.com/users/${name}/repos?per_page=5&`)
 
     dispatch({
       type: GET_REPOS,
