@@ -5,6 +5,7 @@
 The idea is make my own interface to search users from GitHub and show information about them using React, Axios and 
 Bootstrap for UI.
 
+Deployed on [firebase](https://gitusers-app.web.app)
 
 ### Screenshots
 
