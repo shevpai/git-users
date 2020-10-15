@@ -5,10 +5,7 @@
 The idea is make my own interface to search users from GitHub and show information about them using React, Axios and 
 Bootstrap for UI.
 
-I used authorization with Client ID and  Client Secret from .env.local file:
-
-REACT_APP_CLIENT_ID=[CLIENT_ID]<br />
-REACT_APP_CLIENT_SECRET=[CLIENT_SECRET]
+Deployed on [firebase](https://gitusers-app.web.app)
 
 ### Screenshots
 
