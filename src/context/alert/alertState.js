@@ -4,7 +4,7 @@ import { alertReducer } from './alertReducer'
 import { HIDE_ALERT, SHOW_ALERT } from '../types'
 
 export const AlertState = ({children}) => {
-  const [state, dispatch] = useReducer(alertReducer, null)
+  const [state, dispatch] = useReducer(alertReducer, {visible: false})
 
   const hide = () => {
     dispatch({type: HIDE_ALERT}) 
@@ -14,7 +14,7 @@ export const AlertState = ({children}) => {
   const show = (text, type = 'secondary') => {
     dispatch({
       type: SHOW_ALERT,
-      payload: {type, text}
+      payload: {type, text, visible: true}
     })
 
     setTimeout(hide, 5000)   

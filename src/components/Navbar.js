@@ -1,11 +1,14 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
+import { AlertContext } from '../context/alert/alertContext'
 import { GithubContext } from '../context/github/githubContext'
 
 export const Navbar = () => {
+  const alert = useContext(AlertContext)
   const { clearUsers, resLoading } = useContext(GithubContext)
 
   const clearHomePage = () => {
+    alert.hide()
     clearUsers()
     resLoading()
   }
@@ -23,7 +26,13 @@ export const Navbar = () => {
       <div className="navbar-collapse" id="navbarText">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <NavLink className="nav-link" exact to="/history">History</NavLink>
+            <NavLink 
+              className="nav-link" 
+              exact to="/history"
+              onClick={() => alert.hide()}
+              >
+              History
+            </NavLink>
           </li>         
         </ul>  
       </div>    

@@ -23,7 +23,7 @@ export const Search = () => {
         alert.show(`No user matches with username "${value}"`)
       }
 
-    } else alert.show('Input is empty! Please, enter username')    
+    } else alert.show('Input is empty! Please, enter username', 'warning')    
 
     setValue('')
   }
