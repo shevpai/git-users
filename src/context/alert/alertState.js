@@ -8,7 +8,6 @@ export const AlertState = ({children}) => {
 
   const hide = () => {
     dispatch({type: HIDE_ALERT}) 
-    clearTimeout(hide)
   } 
 
   const show = (text, type = 'secondary') => {

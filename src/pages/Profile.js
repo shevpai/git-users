@@ -45,7 +45,7 @@ export const Profile = ({match}) => {
               {location && <p>Location: {location}</p>}
             </div>
             <div className="col">
-              {bio && <Fragment><h3>About {name.split(' ')[0]}:</h3><p>{bio}</p></Fragment>}
+              {bio && <Fragment><h3>About {name.split(' ')[0] || ''}:</h3><p>{bio}</p></Fragment>}
               <a href={html_url}
                  target="_blank" 
                  rel="noopener noreferrer"

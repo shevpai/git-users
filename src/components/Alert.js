@@ -15,7 +15,7 @@ export const Alert = () => {
   return (    
     <div 
       style={styles}
-      className={`alert alert-${alert.type || 'secondary'} alert-dismissible mb-4`}>
+      className={`alert alert-${alert.type} alert-dismissible mb-4`}>
 
       {alert.text}
 

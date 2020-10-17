@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Home } from './pages/Home';
 import { History } from './pages/History';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import { Profile } from './pages/Profile';
 import { Alert } from './components/Alert';
 import { AlertState } from './context/alert/alertState';
@@ -13,10 +13,10 @@ import { LocalStorageState } from './context/localStorage/LocalStorageState';
 function App() {
 
   return (  
-    <LocalStorageState>
-      <GithubState>      
+    <Router>
+      <LocalStorageState>
         <AlertState>
-          <BrowserRouter>
+          <GithubState>         
             <Navbar />
             <div className="container pt-4">   
               <Alert />
@@ -26,10 +26,10 @@ function App() {
                 <Route path="/profile/:name" component={Profile} />
               </Switch>
             </div>
-          </BrowserRouter>
+          </GithubState>  
         </AlertState>             
-      </GithubState>  
-    </LocalStorageState>     
+      </LocalStorageState>    
+    </Router>
   );
 }
 
