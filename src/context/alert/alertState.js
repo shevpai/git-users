@@ -17,7 +17,6 @@ export const AlertState = ({children}) => {
     })
 
     setTimeout(hide, 5000)   
-    clearTimeout(hide)
   } 
 
   return (
