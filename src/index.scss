@@ -3,13 +3,13 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -25,14 +25,14 @@ svg:not(:root) {
 }
 
 .v-align-middle {
-  vertical-align: middle!important;
+  vertical-align: middle !important;
 }
 
 .octicon {
-    display: inline-block;    
-    fill: #fff;
+  display: inline-block;
+  fill: #fff;
 }
 
 .octicon-repo {
-  fill: #586069!important;
+  fill: #586069 !important;
 }
